@@ -29,16 +29,16 @@ public class HelloBrowserServlet extends HttpServlet {
     String displayName = "Browser";
     
     if (userAgent != null) {
-      if (userAgent.contains("Mozilla")) {
-        displayName = "Firefox"; 
-      } else if (userAgent.contains("Explorer")) {
-        displayName = "Internet Explorer"; 
-      } else if (userAgent.contains("Safari")) {
-        displayName = "Safari"; 
+      if (userAgent.contains("Explorer")) {
+        displayName = "Internet Explorer";
       } else if (userAgent.contains("Chrome")) {
-        displayName = "Chrome"; 
+        displayName = "Chrome";
+      } else if (userAgent.contains("Safari")) {
+        displayName = "Safari";
       } else if (userAgent.contains("Opera")) {
-        displayName = "Opera"; 
+        displayName = "Opera";
+      } else if (userAgent.contains("Mozilla")) {
+        displayName = "Firefox";
       } else {
         displayName = userAgent; 
       }
