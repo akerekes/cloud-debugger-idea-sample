@@ -26,19 +26,19 @@ public class HelloBrowserServlet extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
     String userAgent = request.getHeader("User-Agent");
-    String displayName = "Browser";
+    String displayName = "Browser12 ";
     
     if (userAgent != null) {
-      if (userAgent.contains("Mozilla")) {
-        displayName = "Firefox"; 
-      } else if (userAgent.contains("Explorer")) {
-        displayName = "Internet Explorer"; 
-      } else if (userAgent.contains("Safari")) {
-        displayName = "Safari"; 
+      if (userAgent.contains("Explorer")) {
+        displayName = "Internet Explorer";
       } else if (userAgent.contains("Chrome")) {
-        displayName = "Chrome"; 
+        displayName = "Chrome";
+      } else if (userAgent.contains("Safari")) {
+        displayName = "Safari";
       } else if (userAgent.contains("Opera")) {
-        displayName = "Opera"; 
+        displayName = "Opera";
+      } else if (userAgent.contains("Mozilla")) {
+        displayName = "Firefox";
       } else {
         displayName = userAgent; 
       }
